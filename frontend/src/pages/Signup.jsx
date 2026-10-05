@@ -19,8 +19,8 @@ const Signup = () => {
   };
 
   const validate = () => {
-    if (form.name.length < 20 || form.name.length > 60) {
-      return 'Name must be between 20 and 60 characters';
+    if (form.name.length < 2 ) {
+      return 'Name must be between 2 and 10 characters';
     }
     if (form.address.length > 400) {
       return 'Address cannot exceed 400 characters';
@@ -57,7 +57,7 @@ const Signup = () => {
         <h2>Create Account</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Name (20-60 characters)</label>
+            <label>Name (2-10 characters)</label>
             <input
               type="text"
               name="name"

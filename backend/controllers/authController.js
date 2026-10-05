@@ -15,8 +15,8 @@ exports.signup = async (req, res) => {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
-    if (name.length < 20 || name.length > 60) {
-      return res.status(400).json({ message: 'Name must be between 20 and 60 characters' });
+    if (name.length < 2 || name.length > 60) {
+      return res.status(400).json({ message: 'Name must be between 2 and 60 characters' });
     }
 
     if (address.length > 400) {
